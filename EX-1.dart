@@ -1,11 +1,10 @@
-
 enum Skill { FLUTTER, DART, OTHER }
 
 class Adress {
   final String street;
   final String city;
-
-  Adress(this.street,this.city);
+  final int zipCode;
+  Adress(this.street,this.city, this.zipCode);
 }
 class Employee {
   final String _name;
@@ -59,11 +58,11 @@ class Employee {
 }
 
 void main() {
-  var address1 = Adress('6A Preak leab St', 'Phnom Penh');
+  var address1 = Adress('6A Preak leab St', 'Phnom Penh',121002);
   var emp1 = Employee('Sokea', 40000,[Skill.FLUTTER,Skill.DART],address1 ,5);
   emp1.printDetails();
    
-  var address2 = Adress('6A Preak leab St', 'Phnom Penh');
-  var emp2 = Employee('Ronan', 45000 ,[Skill.FLUTTER,Skill.DART],address2 ,3);
+  
+  var emp2 = Employee('Ronan', 45000 ,[Skill.FLUTTER,Skill.DART],address1 ,3);
   emp2.printDetails();
 }
